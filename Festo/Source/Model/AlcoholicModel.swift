@@ -14,3 +14,6 @@ struct AlcoholicModel {
     let mlTotal: Int
 
 }
+
+
+
