@@ -20,6 +20,9 @@
 		4B7A862C292E3F100055FEB5 /* FestoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7A862B292E3F100055FEB5 /* FestoTests.swift */; };
 		4B7A8636292E3F100055FEB5 /* FestoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7A8635292E3F100055FEB5 /* FestoUITests.swift */; };
 		4B7A8638292E3F100055FEB5 /* FestoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7A8637292E3F100055FEB5 /* FestoUITestsLaunchTests.swift */; };
+		4BBBF89B292FB3C400E2FB0B /* ViewFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBBF89A292FB3C400E2FB0B /* ViewFood.swift */; };
+		4BBBF89F292FB4AC00E2FB0B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBBF89E292FB4AC00E2FB0B /* Service.swift */; };
+		4BBBF8A1292FB4BB00E2FB0B /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBBF8A0292FB4BB00E2FB0B /* Protocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		4B7A8631292E3F100055FEB5 /* FestoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FestoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7A8635292E3F100055FEB5 /* FestoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestoUITests.swift; sourceTree = "<group>"; };
 		4B7A8637292E3F100055FEB5 /* FestoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4BBBF89A292FB3C400E2FB0B /* ViewFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFood.swift; sourceTree = "<group>"; };
+		4BBBF89E292FB4AC00E2FB0B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		4BBBF8A0292FB4BB00E2FB0B /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +93,10 @@
 		0D2C5FB2292E5B5100E6889E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				4BBBF89D292FB48E00E2FB0B /* Protocols */,
+				4BBBF89C292FB3D500E2FB0B /* Service */,
 				0D2C5FC5292E693A00E6889E /* Controller */,
-				0D2C5FBF292E67C300E6889E /* Service */,
+				0D2C5FBF292E67C300E6889E /* View */,
 				0D2C5FB4292E5B6B00E6889E /* Model */,
 			);
 			path = Source;
@@ -97,6 +105,7 @@
 		0D2C5FB4292E5B6B00E6889E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0D2C5FC0292E67FB00E6889E /* FoodCalculator.swift */,
 				0D2C5FB7292E5D4A00E6889E /* FoodModel.swift */,
 				0D2C5FB9292E5F7D00E6889E /* DrinkModel.swift */,
 				0D2C5FBB292E615900E6889E /* AlcoholicModel.swift */,
@@ -105,12 +114,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		0D2C5FBF292E67C300E6889E /* Service */ = {
+		0D2C5FBF292E67C300E6889E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0D2C5FC0292E67FB00E6889E /* FoodCalculator.swift */,
+				4BBBF89A292FB3C400E2FB0B /* ViewFood.swift */,
 			);
-			path = Service;
+			path = View;
 			sourceTree = "<group>";
 		};
 		0D2C5FC4292E692900E6889E /* Resource */ = {
@@ -185,6 +194,22 @@
 				4B7A8637292E3F100055FEB5 /* FestoUITestsLaunchTests.swift */,
 			);
 			path = FestoUITests;
+			sourceTree = "<group>";
+		};
+		4BBBF89C292FB3D500E2FB0B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4BBBF89E292FB4AC00E2FB0B /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4BBBF89D292FB48E00E2FB0B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4BBBF8A0292FB4BB00E2FB0B /* Protocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,7 +369,10 @@
 				4B7A8615292E3F0E0055FEB5 /* AppDelegate.swift in Sources */,
 				0D2C5FC3292E687C00E6889E /* FoodGest.swift in Sources */,
 				0D2C5FB8292E5D4A00E6889E /* FoodModel.swift in Sources */,
+				4BBBF8A1292FB4BB00E2FB0B /* Protocol.swift in Sources */,
 				0D2C5FBA292E5F7D00E6889E /* DrinkModel.swift in Sources */,
+				4BBBF89F292FB4AC00E2FB0B /* Service.swift in Sources */,
+				4BBBF89B292FB3C400E2FB0B /* ViewFood.swift in Sources */,
 				4B7A8617292E3F0E0055FEB5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
