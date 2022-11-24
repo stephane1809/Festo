@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D2C5FB8292E5D4A00E6889E /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2C5FB7292E5D4A00E6889E /* FoodModel.swift */; };
+		0D2C5FBA292E5F7D00E6889E /* DrinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2C5FB9292E5F7D00E6889E /* DrinkModel.swift */; };
+		0D2C5FBC292E615900E6889E /* AlcoholicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2C5FBB292E615900E6889E /* AlcoholicModel.swift */; };
+		0D2C5FC1292E67FB00E6889E /* FoodCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2C5FC0292E67FB00E6889E /* FoodCalculator.swift */; };
+		0D2C5FC3292E687C00E6889E /* FoodGest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2C5FC2292E687C00E6889E /* FoodGest.swift */; };
 		4B7A8615292E3F0E0055FEB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7A8614292E3F0E0055FEB5 /* AppDelegate.swift */; };
 		4B7A8617292E3F0E0055FEB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7A8616292E3F0E0055FEB5 /* SceneDelegate.swift */; };
 		4B7A8619292E3F0E0055FEB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7A8618292E3F0E0055FEB5 /* ViewController.swift */; };
@@ -35,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D2C5FB7292E5D4A00E6889E /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		0D2C5FB9292E5F7D00E6889E /* DrinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkModel.swift; sourceTree = "<group>"; };
+		0D2C5FBB292E615900E6889E /* AlcoholicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholicModel.swift; sourceTree = "<group>"; };
+		0D2C5FC0292E67FB00E6889E /* FoodCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCalculator.swift; sourceTree = "<group>"; };
+		0D2C5FC2292E687C00E6889E /* FoodGest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodGest.swift; sourceTree = "<group>"; };
 		4B7A8611292E3F0E0055FEB5 /* Festo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Festo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7A8614292E3F0E0055FEB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B7A8616292E3F0E0055FEB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +84,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D2C5FB2292E5B5100E6889E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0D2C5FC5292E693A00E6889E /* Controller */,
+				0D2C5FBF292E67C300E6889E /* Service */,
+				0D2C5FB4292E5B6B00E6889E /* Model */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		0D2C5FB4292E5B6B00E6889E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D2C5FB7292E5D4A00E6889E /* FoodModel.swift */,
+				0D2C5FB9292E5F7D00E6889E /* DrinkModel.swift */,
+				0D2C5FBB292E615900E6889E /* AlcoholicModel.swift */,
+				0D2C5FC2292E687C00E6889E /* FoodGest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0D2C5FBF292E67C300E6889E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0D2C5FC0292E67FB00E6889E /* FoodCalculator.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0D2C5FC4292E692900E6889E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4B7A861D292E3F0F0055FEB5 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		0D2C5FC5292E693A00E6889E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B7A8618292E3F0E0055FEB5 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0D2C5FC6292E698500E6889E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4B7A8622292E3F0F0055FEB5 /* Info.plist */,
+				4B7A861F292E3F0F0055FEB5 /* LaunchScreen.storyboard */,
+				4B7A8616292E3F0E0055FEB5 /* SceneDelegate.swift */,
+				4B7A8614292E3F0E0055FEB5 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		4B7A8608292E3F0E0055FEB5 = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +163,9 @@
 		4B7A8613292E3F0E0055FEB5 /* Festo */ = {
 			isa = PBXGroup;
 			children = (
-				4B7A8614292E3F0E0055FEB5 /* AppDelegate.swift */,
-				4B7A8616292E3F0E0055FEB5 /* SceneDelegate.swift */,
-				4B7A8618292E3F0E0055FEB5 /* ViewController.swift */,
-				4B7A861D292E3F0F0055FEB5 /* Assets.xcassets */,
-				4B7A861F292E3F0F0055FEB5 /* LaunchScreen.storyboard */,
-				4B7A8622292E3F0F0055FEB5 /* Info.plist */,
+				0D2C5FB2292E5B5100E6889E /* Source */,
+				0D2C5FC4292E692900E6889E /* Resource */,
+				0D2C5FC6292E698500E6889E /* Application */,
 			);
 			path = Festo;
 			sourceTree = "<group>";
@@ -275,8 +338,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D2C5FBC292E615900E6889E /* AlcoholicModel.swift in Sources */,
 				4B7A8619292E3F0E0055FEB5 /* ViewController.swift in Sources */,
+				0D2C5FC1292E67FB00E6889E /* FoodCalculator.swift in Sources */,
 				4B7A8615292E3F0E0055FEB5 /* AppDelegate.swift in Sources */,
+				0D2C5FC3292E687C00E6889E /* FoodGest.swift in Sources */,
+				0D2C5FB8292E5D4A00E6889E /* FoodModel.swift in Sources */,
+				0D2C5FBA292E5F7D00E6889E /* DrinkModel.swift in Sources */,
 				4B7A8617292E3F0E0055FEB5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
