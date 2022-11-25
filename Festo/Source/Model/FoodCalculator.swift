@@ -1,21 +1,21 @@
+////
+////  Calculator.swift
+////  Festo
+////
+////  Created by Marília de Sousa on 23/11/22.
+////
 //
-//  Calculator.swift
-//  Festo
+//import Foundation
 //
-//  Created by Marília de Sousa on 23/11/22.
+//struct FoodCalculator {
 //
-
-import Foundation
-
-struct FoodCalculator {
-
-    func calcula(guests: Int, food: [Food]) -> [FoodForGuest] {
-        
-        // ....
-        
-        return [] // FoodForGuest
-        
-        
-    }
-    
-}
+//    func calcula(guests: Int, food: [Food]) -> [FoodForGuest] {
+//        
+//        // ....
+//        
+//        return [] // FoodForGuest
+//        
+//        
+//    }
+//    
+//}
