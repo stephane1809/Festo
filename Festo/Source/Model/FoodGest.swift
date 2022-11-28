@@ -8,9 +8,11 @@
 import Foundation
 
 struct FoodGuest {
-    
-    let food: Food
-    let unitForGuest: Int
-    let totalWeight: Int
-    
+
+    let food: FoodModel
+    let unitForGuest: Int?
+    let weightForGuest: Int?
+    let totalWeight: Int?
+    let totalUnit: Int?
+
 }

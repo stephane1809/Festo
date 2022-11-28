@@ -11,9 +11,7 @@ struct AlcoholicModel {
 
     let name: String
     let mlForGuest: Int
-    let mlTotal: Int
 
 }
-
 
 
