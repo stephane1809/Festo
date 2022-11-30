@@ -10,10 +10,8 @@ import Foundation
 struct AlcoholicModel {
 
     let name: String
-    let mlForGuest: Int
-    let mlTotal: Int
+    let percentForGuestWithBeer: Double
 
 }
-
 
 

@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Food {
-    
+struct FoodModel {
+
     let name: String
     let unitWeight: Int
-    let imageFood: String
-    
+//    let imageFood: String
+
 }
 

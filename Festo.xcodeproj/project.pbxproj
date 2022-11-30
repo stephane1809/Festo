@@ -20,6 +20,9 @@
 		4B7A862C292E3F100055FEB5 /* FestoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7A862B292E3F100055FEB5 /* FestoTests.swift */; };
 		4B7A8636292E3F100055FEB5 /* FestoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7A8635292E3F100055FEB5 /* FestoUITests.swift */; };
 		4B7A8638292E3F100055FEB5 /* FestoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7A8637292E3F100055FEB5 /* FestoUITestsLaunchTests.swift */; };
+		4B9F8AE529377A7C00123DCF /* DrinkCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9F8AE429377A7C00123DCF /* DrinkCalculator.swift */; };
+		4B9F8AE729378FD200123DCF /* DrinkGuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9F8AE629378FD200123DCF /* DrinkGuest.swift */; };
+		4B9F8AE929379CBA00123DCF /* AlcoholicCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9F8AE829379CBA00123DCF /* AlcoholicCalculator.swift */; };
 		4BBBF89B292FB3C400E2FB0B /* ViewFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBBF89A292FB3C400E2FB0B /* ViewFood.swift */; };
 		4BBBF89F292FB4AC00E2FB0B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBBF89E292FB4AC00E2FB0B /* Service.swift */; };
 		4BBBF8A1292FB4BB00E2FB0B /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBBF8A0292FB4BB00E2FB0B /* Protocol.swift */; };
@@ -60,6 +63,9 @@
 		4B7A8631292E3F100055FEB5 /* FestoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FestoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7A8635292E3F100055FEB5 /* FestoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestoUITests.swift; sourceTree = "<group>"; };
 		4B7A8637292E3F100055FEB5 /* FestoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4B9F8AE429377A7C00123DCF /* DrinkCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCalculator.swift; sourceTree = "<group>"; };
+		4B9F8AE629378FD200123DCF /* DrinkGuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkGuest.swift; sourceTree = "<group>"; };
+		4B9F8AE829379CBA00123DCF /* AlcoholicCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholicCalculator.swift; sourceTree = "<group>"; };
 		4BBBF89A292FB3C400E2FB0B /* ViewFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFood.swift; sourceTree = "<group>"; };
 		4BBBF89E292FB4AC00E2FB0B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		4BBBF8A0292FB4BB00E2FB0B /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
@@ -106,10 +112,13 @@
 			isa = PBXGroup;
 			children = (
 				0D2C5FC0292E67FB00E6889E /* FoodCalculator.swift */,
+				4B9F8AE429377A7C00123DCF /* DrinkCalculator.swift */,
+				4B9F8AE829379CBA00123DCF /* AlcoholicCalculator.swift */,
 				0D2C5FB7292E5D4A00E6889E /* FoodModel.swift */,
 				0D2C5FB9292E5F7D00E6889E /* DrinkModel.swift */,
 				0D2C5FBB292E615900E6889E /* AlcoholicModel.swift */,
 				0D2C5FC2292E687C00E6889E /* FoodGest.swift */,
+				4B9F8AE629378FD200123DCF /* DrinkGuest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -365,15 +374,18 @@
 			files = (
 				0D2C5FBC292E615900E6889E /* AlcoholicModel.swift in Sources */,
 				4B7A8619292E3F0E0055FEB5 /* ViewController.swift in Sources */,
+				4B9F8AE529377A7C00123DCF /* DrinkCalculator.swift in Sources */,
 				0D2C5FC1292E67FB00E6889E /* FoodCalculator.swift in Sources */,
 				4B7A8615292E3F0E0055FEB5 /* AppDelegate.swift in Sources */,
 				0D2C5FC3292E687C00E6889E /* FoodGest.swift in Sources */,
+				4B9F8AE929379CBA00123DCF /* AlcoholicCalculator.swift in Sources */,
 				0D2C5FB8292E5D4A00E6889E /* FoodModel.swift in Sources */,
 				4BBBF8A1292FB4BB00E2FB0B /* Protocol.swift in Sources */,
 				0D2C5FBA292E5F7D00E6889E /* DrinkModel.swift in Sources */,
 				4BBBF89F292FB4AC00E2FB0B /* Service.swift in Sources */,
 				4BBBF89B292FB3C400E2FB0B /* ViewFood.swift in Sources */,
 				4B7A8617292E3F0E0055FEB5 /* SceneDelegate.swift in Sources */,
+				4B9F8AE729378FD200123DCF /* DrinkGuest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
