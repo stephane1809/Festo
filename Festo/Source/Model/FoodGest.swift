@@ -9,10 +9,14 @@ import Foundation
 
 struct FoodGuest {
 
-    let food: FoodModel
-    let unitForGuest: Int?
-    let weightForGuest: Int?
-    let totalWeight: Int?
-    let totalUnit: Int?
+    var foodName: String
+    var unitForGuest: Int
+    var totalUnit: Int
+
+    init(foodName: String, unitForGuest: Int, totalUnit: Int) {
+        self.foodName = foodName
+        self.unitForGuest = unitForGuest
+        self.totalUnit = totalUnit
+    }
 
 }

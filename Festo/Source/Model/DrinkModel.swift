@@ -10,6 +10,5 @@ import Foundation
 struct DrinkModel {
 
     let name: String
-    let mlForGuest: Int
-
+    let percentForGuestWithOther: Double
 }
