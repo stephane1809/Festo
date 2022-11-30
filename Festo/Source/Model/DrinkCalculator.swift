@@ -12,7 +12,7 @@ struct DrinkCalculator {
 
     func drinkCalculator(numberGuests: Int, selectDrinks: [DrinkModel] ) -> [DrinkGuest] {
 
-        let totalWeightGuest = 750
+        let totalMlGuest = 750
         var mlTipe: [Double] = []
         var mlTotalForDrinks: [Double] = []
         var percentsMlWithOther: [Double] = selectDrinks.map {percent in Double(percent.percentForGuestWithOther)}
@@ -25,10 +25,10 @@ struct DrinkCalculator {
             let name = names[index]
 
             if(selectDrinks.count > 1){
-                mlTipe[index] = Double(totalWeightGuest) * Double(percentsMlWithOther[index])
+                mlTipe[index] = Double(totalMlGuest) * Double(percentsMlWithOther[index])
             }
             else {
-                mlTipe[index] = Double(totalWeightGuest)
+                mlTipe[index] = Double(totalMlGuest)
             }
 
             var mlTotalForDrink = Double(mlTipe[index]) * Double(numberGuests)
