@@ -13,6 +13,10 @@ struct AlcoholicCalculator {
 
     func alcoholicCalculator(numberGuests: Int, selectAlcoholicDrinks: [AlcoholicModel] ) -> [DrinkGuest] {
 
+        if(selectAlcoholicDrinks.count == 0){
+            return []
+        }
+
         var mlTipe: [Double] = []
         var mlTotalForDrinks: [Double] = []
         var categorys: [String] = selectAlcoholicDrinks.map {category in String(category.category)}
@@ -23,7 +27,7 @@ struct AlcoholicCalculator {
 
         for index in 0..<selectAlcoholicDrinks.count{
             if(categorys[index] == "Cevada"){
-                verificator += 1
+                verificator = verificator + 1
             }
         }
 
@@ -37,7 +41,7 @@ struct AlcoholicCalculator {
                     mlTipe[index] = 1150
                 } else if((selectAlcoholicDrinks.count > 1) && (categorys[index] == "Destilado")){
                     let totalMlGuest = 1280
-                    mlTipe[index] = Double(130 / selectAlcoholicDrinks.count)
+                    mlTipe[index] = Double(130 / (selectAlcoholicDrinks.count - 1))
                 }
             } else {
                 let totalMlGuest = 260

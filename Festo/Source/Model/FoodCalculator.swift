@@ -13,6 +13,10 @@ struct FoodCalculator {
 
     func foodCalculator(numberGuests: Int, selectFood: [FoodModel] ) -> [FoodGuest] {
 
+        if(selectFood.count == 0){
+            return []
+        }
+
         let totalWeightGuest = 400
         var weightTipe: Double = Double(400 / selectFood.count)
 
