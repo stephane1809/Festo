@@ -12,3 +12,5 @@ struct DrinkModel {
     let name: String
     let percentForGuestWithOther: Double
 }
+
+

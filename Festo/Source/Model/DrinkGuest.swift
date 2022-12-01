@@ -10,12 +10,12 @@ struct DrinkGuest {
 
     var drinkName: String
     var mlForGuest: Double
-    var totalMl: Double
+    var totalLitro: Double
 
-    init(drinkName: String, mlForGuest: Double, totalMl: Double) {
+    init(drinkName: String, mlForGuest: Double, totalLitro: Double) {
         self.drinkName = drinkName
         self.mlForGuest = mlForGuest
-        self.totalMl = totalMl
+        self.totalLitro = totalLitro
     }
 
 }

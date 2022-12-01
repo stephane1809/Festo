@@ -14,4 +14,3 @@ struct FoodModel {
 //    let imageFood: String
 
 }
-
