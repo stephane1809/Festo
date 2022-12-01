@@ -13,7 +13,7 @@ struct FoodCalculator {
 
     func foodCalculator(numberGuests: Int, selectFood: [FoodModel] ) -> [FoodGuest] {
 
-        if(selectFood.count == 0){
+        if selectFood.count == 0 {
             return []
         }
 
@@ -43,12 +43,12 @@ struct FoodCalculator {
             if Double(rest) >= Double(acceptUnitWeight) {
                 units[index] += 1
             }
+            
             var totalUnitsForFood = units[index] * numberGuests
             var foodGuest = FoodGuest(foodName: names[index], unitForGuest: units[index], totalUnit: totalUnitsForFood)
             foodGuests.append(foodGuest)
-
         }
-        
+
         return foodGuests
     }
 

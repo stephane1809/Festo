@@ -8,10 +8,6 @@
 import Foundation
 
 struct AlcoholicModel {
-
     let name: String
     let category: String
-
 }
-
-

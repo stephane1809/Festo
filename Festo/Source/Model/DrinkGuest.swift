@@ -6,8 +6,8 @@
 //
 
 import Foundation
-struct DrinkGuest {
 
+struct DrinkGuest {
     var drinkName: String
     var mlForGuest: Double
     var totalLitro: Double
@@ -17,5 +17,4 @@ struct DrinkGuest {
         self.mlForGuest = mlForGuest
         self.totalLitro = totalLitro
     }
-
 }
