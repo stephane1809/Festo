@@ -9,41 +9,55 @@ import Foundation
 
 struct AlcoholicCalculator {
     var numberGuests: Int = 30
-    var cerveja = AlcoholicModel(name: "cerveja", percentForGuestWithBeer: 0.85)
+    var cerveja = AlcoholicModel(name: "Cerveja", category: "Cevada")
 
     func alcoholicCalculator(numberGuests: Int, selectAlcoholicDrinks: [AlcoholicModel] ) -> [DrinkGuest] {
 
-        var mlTipe: [Double] = []
+        if selectAlcoholicDrinks.count == 0 {
+            return []
+        }
+
+        var mlTipe: [Double] = selectAlcoholicDrinks.map { mlTipe in 1}
         var mlTotalForDrinks: [Double] = []
-        var percentsMlWithBeer: [Double] = selectAlcoholicDrinks.map {percent in Double(percent.percentForGuestWithBeer)}
+        var categorys: [String] = selectAlcoholicDrinks.map {category in String(category.category)}
+        var mlForL = 1000
 
         var names: [String] = selectAlcoholicDrinks.map { name in String(name.name)}
+        var verificator = 0
         var drinksGuest: [DrinkGuest] = []
 
         for index in 0..<selectAlcoholicDrinks.count {
-            let percent = percentsMlWithBeer[index]
-            let name = names[index]
+            if categorys[index] == "Cevada" {
+                verificator += 1
+            }
+        }
 
-            if((names[index] == "Cerveja") && (selectAlcoholicDrinks.count == 1)){
-                let totalMlGuest = 1500
-                mlTipe[index] = Double(totalMlGuest)
-            }
-            else if((names[index] == "Cerveja") && (selectAlcoholicDrinks.count > 1)) {
-                let totalMlGuest = 1760
-                mlTipe[index] = Double(totalMlGuest) * Double(percentsMlWithBeer[index])
-            }
-            else if(names[index] != "Cerveja"){
+        for index in 0..<selectAlcoholicDrinks.count {
+            if verificator == 1 {
+                if selectAlcoholicDrinks.count == 1 {
+                    let totalMlGuest = 1500
+                    mlTipe[index] = Double(totalMlGuest)
+                } else if (selectAlcoholicDrinks.count > 1) && (categorys[index] == "Cevada") {
+                    let totalMlGuest = 1280
+                    mlTipe[index] = 1150
+                } else if (selectAlcoholicDrinks.count > 1) && (categorys[index] == "Destilado") {
+                    let totalMlGuest = 1280
+                    mlTipe[index] = Double(130 / (selectAlcoholicDrinks.count - 1))
+                }
+            } else {
                 let totalMlGuest = 260
-                mlTipe[index] = Double(totalMlGuest / selectAlcoholicDrinks.count)
+                mlTipe[index] = Double(totalMlGuest) / Double(selectAlcoholicDrinks.count)
             }
 
-            var mlTotalForDrink = Double(mlTipe[index]) * Double(numberGuests)
+            var mlTotalForDrink = (Double(mlTipe[index]) * Double(numberGuests)) / Double(mlForL)
 
             mlTotalForDrinks.append(mlTotalForDrink)
 
-            var drinkGuest = DrinkGuest(drinkName: names[index], mlForGuest: Double(mlTipe[index]), totalMl: Double(mlTotalForDrinks[index]))
+            var drinkGuest = DrinkGuest(drinkName: names[index], mlForGuest: Double(mlTipe[index]), totalLitro: Double(mlTotalForDrinks[index]))
+
             drinksGuest.append(drinkGuest)
         }
-        return []
+
+        return drinksGuest
     }
 }

@@ -8,7 +8,6 @@
 import Foundation
 
 struct FoodGuest {
-
     var foodName: String
     var unitForGuest: Int
     var totalUnit: Int
@@ -18,5 +17,4 @@ struct FoodGuest {
         self.unitForGuest = unitForGuest
         self.totalUnit = totalUnit
     }
-
 }

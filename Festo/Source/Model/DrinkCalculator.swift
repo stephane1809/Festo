@@ -6,36 +6,55 @@
 //
 
 import Foundation
+
 struct DrinkCalculator {
     var numberGuests: Int = 30
-    var refrigerante = DrinkModel(name: "refri", percentForGuestWithOther: 0.73)
+    var refrigerante = DrinkModel(name: "Refri", percentForGuestWithOther: 0.73)
+    var suco = DrinkModel(name: "Suco", percentForGuestWithOther: 0.27)
+    var mlForL = 1000
 
     func drinkCalculator(numberGuests: Int, selectDrinks: [DrinkModel] ) -> [DrinkGuest] {
 
-        let totalWeightGuest = 750
-        var mlTipe: [Double] = []
-        var mlTotalForDrinks: [Double] = []
-        var percentsMlWithOther: [Double] = selectDrinks.map {percent in Double(percent.percentForGuestWithOther)}
+        if selectDrinks.count == 0 {
+            return []
+        }
 
-        var names: [String] = selectDrinks.map { name in String(name.name)}
+        let totalMlGuest = 750
+        let mlAgua = 200
+
+        var mlTipe: [Double] = selectDrinks.map {mlTipe in mlTipe.percentForGuestWithOther * Double(totalMlGuest)}
+        var litroTotalForDrinks: [Double] = []
+        let percentsMlWithOther: [Double] = selectDrinks.map {percent in Double(percent.percentForGuestWithOther)}
+
+        let names: [String] = selectDrinks.map { name in String(name.name)}
         var drinksGuest: [DrinkGuest] = []
+        var verificator = 0
 
         for index in 0..<selectDrinks.count {
-            let percent = percentsMlWithOther[index]
-            let name = names[index]
-
-            if(selectDrinks.count > 1){
-                mlTipe[index] = Double(totalWeightGuest) * Double(percentsMlWithOther[index])
+            if names[index] == "Água" {
+                verificator += 1
             }
-            else {
-                mlTipe[index] = Double(totalWeightGuest)
+        }
+
+        for index in 0..<selectDrinks.count {
+            if (verificator == 1) && (names[index] == "Água") {
+                mlTipe[index] = Double(mlAgua)
+            } else if (verificator == 1) && (names[index] != "Água") && (selectDrinks.count == 2) {
+                mlTipe[index] = Double(totalMlGuest)
+            } else if (verificator == 1) && (names[index] != "Água") && (selectDrinks.count > 2) {
+                mlTipe[index] = Double(totalMlGuest) * Double(percentsMlWithOther[index])
+            } else if (verificator == 0) && (selectDrinks.count > 1) {
+                mlTipe[index] = Double(totalMlGuest) * Double(percentsMlWithOther[index])
+            } else if (verificator == 0) && (selectDrinks.count == 1) {
+                mlTipe[index] = Double(totalMlGuest)
             }
+            let litroTotalForDrink = (Double(mlTipe[index]) * Double(numberGuests)) / Double(mlForL)
 
-            var mlTotalForDrink = Double(mlTipe[index]) * Double(numberGuests)
+            litroTotalForDrinks.append(litroTotalForDrink)
 
-            mlTotalForDrinks.append(mlTotalForDrink)
-
-            var drinkGuest = DrinkGuest(drinkName: names[index], mlForGuest: Double(mlTipe[index]), totalMl: Double(mlTotalForDrinks[index]))
+            let drinkGuest = DrinkGuest(drinkName: names[index],
+                                        mlForGuest: Double(mlTipe[index]),
+                                        totalLitro: Double(litroTotalForDrinks[index]))
             drinksGuest.append(drinkGuest)
         }
 
@@ -43,24 +62,3 @@ struct DrinkCalculator {
     }
 
 }
-
-//        var foodGuests: [FoodGuest] = []
-//
-//        for index in 0..<units.count {
-//            let name = names[index]
-//            let unitWeight = unitWeights[index]
-//            let rest = rests[index]
-//
-//            let minPercent = 0.6
-//            let acceptUnitWeight = unitWeight * minPercent
-//
-//            if Double(rest) >= Double(acceptUnitWeight) {
-//                units[index] += 1
-//            }
-//
-//            var foodGuest = FoodGuest(foodName: names[index], unitForGuest: Int(unitWeights[index]), totalUnit: units[index])
-//            foodGuests.append(foodGuest)
-//
-//        }
-//
-//        return foodGuests
