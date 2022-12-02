@@ -24,9 +24,9 @@ struct DrinkCalculator {
 
         var mlTipe: [Double] = selectDrinks.map {mlTipe in mlTipe.percentForGuestWithOther * Double(totalMlGuest)}
         var litroTotalForDrinks: [Double] = []
-        var percentsMlWithOther: [Double] = selectDrinks.map {percent in Double(percent.percentForGuestWithOther)}
+        let percentsMlWithOther: [Double] = selectDrinks.map {percent in Double(percent.percentForGuestWithOther)}
 
-        var names: [String] = selectDrinks.map { name in String(name.name)}
+        let names: [String] = selectDrinks.map { name in String(name.name)}
         var drinksGuest: [DrinkGuest] = []
         var verificator = 0
 
@@ -48,11 +48,13 @@ struct DrinkCalculator {
             } else if (verificator == 0) && (selectDrinks.count == 1) {
                 mlTipe[index] = Double(totalMlGuest)
             }
-            var litroTotalForDrink = (Double(mlTipe[index]) * Double(numberGuests)) / Double(mlForL)
+            let litroTotalForDrink = (Double(mlTipe[index]) * Double(numberGuests)) / Double(mlForL)
 
             litroTotalForDrinks.append(litroTotalForDrink)
 
-            var drinkGuest = DrinkGuest(drinkName: names[index], mlForGuest: Double(mlTipe[index]), totalLitro: Double(litroTotalForDrinks[index]))
+            let drinkGuest = DrinkGuest(drinkName: names[index],
+                                        mlForGuest: Double(mlTipe[index]),
+                                        totalLitro: Double(litroTotalForDrinks[index]))
             drinksGuest.append(drinkGuest)
         }
 
