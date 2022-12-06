@@ -9,7 +9,7 @@ import Foundation
 
 struct AlcoholicCalculator {
     var numberGuests: Int = 30
-    var cerveja = AlcoholicModel(name: "Cerveja", category: "Cevada")
+//    var cerveja = AlcoholicModel(name: "Cerveja", category: "Cevada")
 
     func alcoholicCalculator(numberGuests: Int, selectAlcoholicDrinks: [AlcoholicModel] ) -> [DrinkGuest] {
 
