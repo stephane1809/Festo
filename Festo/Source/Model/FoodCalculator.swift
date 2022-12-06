@@ -9,6 +9,7 @@ import Foundation
 
 struct FoodCalculator {
     var numberGuests: Int = 30
+    let totalWeightGuest = 400
 //    var salgadinho = FoodModel(name: "Salgado", unitWeight: 30)
 
     func foodCalculator(numberGuests: Int, selectFood: [FoodModel] ) -> [FoodGuest] {
@@ -17,8 +18,11 @@ struct FoodCalculator {
             return []
         }
 
-        let totalWeightGuest = 400
-        let weightTipe: Double = Double(400 / selectFood.count)
+//        for index in 0..<selectFood.count {
+//            //vai verificar a quantidade de comidas salgadas e doces
+//        }
+
+        let weightTipe: Double = Double(totalWeightGuest / selectFood.count)
 
         var units: [Int] =  selectFood.map { food in
             Int(weightTipe)/Int(food.unitWeight)
