@@ -9,7 +9,7 @@ import Foundation
 
 struct FoodCalculator {
     var numberGuests: Int = 30
-    var salgadinho = FoodModel(name: "Salgado", unitWeight: 30)
+//    var salgadinho = FoodModel(name: "Salgado", unitWeight: 30)
 
     func foodCalculator(numberGuests: Int, selectFood: [FoodModel] ) -> [FoodGuest] {
 

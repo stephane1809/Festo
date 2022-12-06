@@ -26,6 +26,10 @@
 		4BBBF89B292FB3C400E2FB0B /* ViewFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBBF89A292FB3C400E2FB0B /* ViewFood.swift */; };
 		4BBBF89F292FB4AC00E2FB0B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBBF89E292FB4AC00E2FB0B /* Service.swift */; };
 		4BBBF8A1292FB4BB00E2FB0B /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBBF8A0292FB4BB00E2FB0B /* Protocol.swift */; };
+		ABA16181293E192800D05A20 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA16180293E192800D05A20 /* MenuView.swift */; };
+		ABA16183293E19A300D05A20 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA16182293E19A300D05A20 /* MenuTableViewCell.swift */; };
+		ABA16185293E19CD00D05A20 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA16184293E19CD00D05A20 /* MenuViewController.swift */; };
+		ABA16187293E356A00D05A20 /* StepperGuestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA16186293E356A00D05A20 /* StepperGuestsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		4BBBF89A292FB3C400E2FB0B /* ViewFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFood.swift; sourceTree = "<group>"; };
 		4BBBF89E292FB4AC00E2FB0B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		4BBBF8A0292FB4BB00E2FB0B /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		ABA16180293E192800D05A20 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		ABA16182293E19A300D05A20 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		ABA16184293E19CD00D05A20 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		ABA16186293E356A00D05A20 /* StepperGuestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperGuestsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				4BBBF89A292FB3C400E2FB0B /* ViewFood.swift */,
+				ABA16180293E192800D05A20 /* MenuView.swift */,
+				ABA16182293E19A300D05A20 /* MenuTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -143,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				4B7A8618292E3F0E0055FEB5 /* ViewController.swift */,
+				ABA16184293E19CD00D05A20 /* MenuViewController.swift */,
+				ABA16186293E356A00D05A20 /* StepperGuestsView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -377,11 +389,15 @@
 				4B9F8AE529377A7C00123DCF /* DrinkCalculator.swift in Sources */,
 				0D2C5FC1292E67FB00E6889E /* FoodCalculator.swift in Sources */,
 				4B7A8615292E3F0E0055FEB5 /* AppDelegate.swift in Sources */,
+				ABA16187293E356A00D05A20 /* StepperGuestsView.swift in Sources */,
 				0D2C5FC3292E687C00E6889E /* FoodGest.swift in Sources */,
 				4B9F8AE929379CBA00123DCF /* AlcoholicCalculator.swift in Sources */,
 				0D2C5FB8292E5D4A00E6889E /* FoodModel.swift in Sources */,
 				4BBBF8A1292FB4BB00E2FB0B /* Protocol.swift in Sources */,
 				0D2C5FBA292E5F7D00E6889E /* DrinkModel.swift in Sources */,
+				ABA16183293E19A300D05A20 /* MenuTableViewCell.swift in Sources */,
+				ABA16185293E19CD00D05A20 /* MenuViewController.swift in Sources */,
+				ABA16181293E192800D05A20 /* MenuView.swift in Sources */,
 				4BBBF89F292FB4AC00E2FB0B /* Service.swift in Sources */,
 				4BBBF89B292FB3C400E2FB0B /* ViewFood.swift in Sources */,
 				4B7A8617292E3F0E0055FEB5 /* SceneDelegate.swift in Sources */,

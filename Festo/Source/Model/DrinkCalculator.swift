@@ -9,8 +9,8 @@ import Foundation
 
 struct DrinkCalculator {
     var numberGuests: Int = 30
-    var refrigerante = DrinkModel(name: "Refri", percentForGuestWithOther: 0.73)
-    var suco = DrinkModel(name: "Suco", percentForGuestWithOther: 0.27)
+//    var refrigerante = DrinkModel(name: "Refri", percentForGuestWithOther: 0.73)
+//    var suco = DrinkModel(name: "Suco", percentForGuestWithOther: 0.27)
     var mlForL = 1000
 
     func drinkCalculator(numberGuests: Int, selectDrinks: [DrinkModel] ) -> [DrinkGuest] {
