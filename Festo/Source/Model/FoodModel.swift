@@ -12,3 +12,7 @@ struct FoodModel {
     let unitWeight: Int
     let imageFood: String?
 }
+
+extension FoodModel: Hashable {
+    
+}

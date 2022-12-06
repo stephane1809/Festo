@@ -74,6 +74,7 @@ class MenuTableViewCell: UITableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
+        print(#function)
         foodTitle.text = nil
         foodImage.image = nil
     }

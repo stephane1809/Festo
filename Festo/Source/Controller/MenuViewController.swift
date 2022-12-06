@@ -8,11 +8,10 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-
-   public var selectedFood: [FoodModel] = []
-
-    var menuView = MenuView()
+    public var selectedFood: Set<FoodModel> = []
+    public var selectedIndexPaths = Set<IndexPath>()
     private var sectionTitle = [String]()
+    var menuView = MenuView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +20,6 @@ class MenuViewController: UIViewController {
         menuView.menuTableView.dataSource = self
         sectionTitle = ["Comidas", "Doces", "Bebidas", "Bebidas +18"]
 
-//        if let selectedIndexPaths = menuView.menuTableView.indexPathsForSelectedRows {
-//            let selectedFoods = selectedIndexPaths.map { indexPath in
-//                let food = all[indexPath.section][indexPath.row]
-//                return food
-//            }
-//        }
     }
 }
 
@@ -82,29 +75,39 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         default:
             cell.configureCellInformations(text: "menu", imageName: "pizza")
         }
+
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let cell = cell as? MenuTableViewCell else { return }
+        if selectedIndexPaths.contains(indexPath) {
+            cell.checkList.image = UIImage(systemName: "circle.fill")
+        }
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? MenuTableViewCell else {
-                    return
-                }
-        
-        selectedFood.append(foods[indexPath.row])
-            print(selectedFood)
-        //        tableView.cellForRow(at: )
-//        print()
-    }
+            return
+        }
+        if
+            let indexPathsForSelectedRowstableView = tableView.indexPathsForSelectedRows,
+            indexPathsForSelectedRowstableView.contains(indexPath)
+        {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
 
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        guard section == 0 else {
-//            return nil
-//        }
-//        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: MenuHeaderView.identifier)
-//        return header
-//    }
-//
-//    private func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat? {
-//        return section == 0 ? 200 : 0
-//    }
+        let food = foods[indexPath.row]
+
+        if selectedIndexPaths.contains(indexPath) {
+            cell.checkList.image = UIImage(systemName: "circle")
+            selectedIndexPaths.remove(indexPath)
+            selectedFood.remove(food)
+        } else {
+            cell.checkList.image = UIImage(systemName: "circle.fill")
+            selectedIndexPaths.insert(indexPath)
+            selectedFood.insert(food)
+            print(selectedFood.count)
+        }
+    }
 }
