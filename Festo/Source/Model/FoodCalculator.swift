@@ -23,9 +23,9 @@ struct FoodCalculator {
         for index in 0..<selectFood.count {
 
             if selectFood[index].foodCategory == "doce" {
-                doceCount == doceCount + 1
+                doceCount += 1
             } else if selectFood[index].foodCategory == "salgado" {
-                salgadoeCount == salgadoeCount + 1
+                salgadoeCount += 1
             }
         }
 
