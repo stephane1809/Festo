@@ -16,15 +16,16 @@ struct FoodCalculator {
         if(selectFood.count == 0){
             return []
         }
+
+        var foodGuests: [FoodGuest] = []
         var doceCount: Int = 0
         var salgadoeCount: Int = 0
-        var foodGuests: [FoodGuest] = []
-
         for index in 0..<selectFood.count {
+
             if selectFood[index].foodCategory == "doce" {
-                doceCount = doceCount + 1
+                doceCount == doceCount + 1
             } else if selectFood[index].foodCategory == "salgado" {
-                salgadoeCount = salgadoeCount + 1
+                salgadoeCount == salgadoeCount + 1
             }
         }
 
