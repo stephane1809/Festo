@@ -42,13 +42,11 @@ struct FoodCalculator {
             if Double(rest) >= Double(acceptUnitWeight) {
                 units[index] += 1
             }
-            
+
             let totalUnitsForFood = units[index] * numberGuests
             let foodGuest = FoodGuest(foodName: names[index], unitForGuest: units[index], totalUnit: totalUnitsForFood)
             foodGuests.append(foodGuest)
         }
-
         return foodGuests
     }
-
 }

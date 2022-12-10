@@ -30,6 +30,8 @@
 		ABA16183293E19A300D05A20 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA16182293E19A300D05A20 /* MenuTableViewCell.swift */; };
 		ABA16185293E19CD00D05A20 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA16184293E19CD00D05A20 /* MenuViewController.swift */; };
 		ABA16187293E356A00D05A20 /* StepperGuestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA16186293E356A00D05A20 /* StepperGuestsView.swift */; };
+		ABA161892940C5B500D05A20 /* MenuFolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA161882940C5B500D05A20 /* MenuFolderCell.swift */; };
+		ABA161C92945114F00D05A20 /* StepperViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA161C82945114F00D05A20 /* StepperViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		ABA16182293E19A300D05A20 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		ABA16184293E19CD00D05A20 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		ABA16186293E356A00D05A20 /* StepperGuestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperGuestsView.swift; sourceTree = "<group>"; };
+		ABA161882940C5B500D05A20 /* MenuFolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFolderCell.swift; sourceTree = "<group>"; };
+		ABA161C82945114F00D05A20 /* StepperViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 				4BBBF89A292FB3C400E2FB0B /* ViewFood.swift */,
 				ABA16180293E192800D05A20 /* MenuView.swift */,
 				ABA16182293E19A300D05A20 /* MenuTableViewCell.swift */,
+				ABA161882940C5B500D05A20 /* MenuFolderCell.swift */,
+				ABA161C82945114F00D05A20 /* StepperViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -387,6 +393,7 @@
 				0D2C5FBC292E615900E6889E /* AlcoholicModel.swift in Sources */,
 				4B7A8619292E3F0E0055FEB5 /* ViewController.swift in Sources */,
 				4B9F8AE529377A7C00123DCF /* DrinkCalculator.swift in Sources */,
+				ABA161C92945114F00D05A20 /* StepperViewCell.swift in Sources */,
 				0D2C5FC1292E67FB00E6889E /* FoodCalculator.swift in Sources */,
 				4B7A8615292E3F0E0055FEB5 /* AppDelegate.swift in Sources */,
 				ABA16187293E356A00D05A20 /* StepperGuestsView.swift in Sources */,
@@ -402,6 +409,7 @@
 				4BBBF89B292FB3C400E2FB0B /* ViewFood.swift in Sources */,
 				4B7A8617292E3F0E0055FEB5 /* SceneDelegate.swift in Sources */,
 				4B9F8AE729378FD200123DCF /* DrinkGuest.swift in Sources */,
+				ABA161892940C5B500D05A20 /* MenuFolderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -35,27 +35,27 @@ class MenuTableViewCell: UITableViewCell {
     }()
 
     lazy var checkList: UIImageView = {
-           let checkList = UIImageView()
-           checkList.translatesAutoresizingMaskIntoConstraints = false
-           checkList.tintColor = .black
-           return checkList
-       }()
+        let checkList = UIImageView()
+        checkList.translatesAutoresizingMaskIntoConstraints = false
+        checkList.tintColor = UIColor(red: 0.38, green: 0.4, blue: 0.23, alpha: 1)
+        checkList.backgroundColor = .white
+        checkList.layer.cornerRadius = 24
+        return checkList
+    }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
 
     override func setSelected(_ highlighted: Bool, animated: Bool) {
-           super.setSelected(highlighted, animated: animated)
-           switch highlighted {
-           case true:
-               checkList.image = UIImage(systemName: "circle.fill")
-              // MenuViewController.selectedFood.insert(indexPath)
-           case false:
-               checkList.image = UIImage(systemName: "circle")
-            //  MenuViewController.selectedFood.remove(indexPath)
-           }
-       }
+        super.setSelected(highlighted, animated: animated)
+        switch highlighted {
+        case true:
+            checkList.image = UIImage(systemName: "checkmark.circle.fill")
+        case false:
+            checkList.image = UIImage(systemName: "circle")
+        }
+    }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -69,7 +69,6 @@ class MenuTableViewCell: UITableViewCell {
         cell.addSubview(checkList)
         contentView.backgroundColor = .systemBackground
         configConstraints()
-
     }
 
     override func prepareForReuse() {
@@ -86,28 +85,24 @@ class MenuTableViewCell: UITableViewCell {
             foodTitle.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -147),
             foodTitle.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -31)
         ])
-
         NSLayoutConstraint.activate([
             self.foodImage.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             self.foodImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 50),
             self.foodImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -277),
             self.foodImage.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
         ])
-
         NSLayoutConstraint.activate([
             cell.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             cell.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
             cell.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -28),
             cell.heightAnchor.constraint(equalTo: self.heightAnchor, constant: -10)
         ])
-
         NSLayoutConstraint.activate([
-
-                  checkList.topAnchor.constraint(equalTo: cell.topAnchor, constant: 24),
-                  checkList.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 274),
-                  checkList.trailingAnchor.constraint(equalTo: cell.trailingAnchor, constant: -24),
-                  checkList.bottomAnchor.constraint(equalTo: cell.bottomAnchor, constant: -28)
-              ])
+            checkList.topAnchor.constraint(equalTo: cell.topAnchor, constant: 22),
+            checkList.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 268),
+            checkList.trailingAnchor.constraint(equalTo: cell.trailingAnchor, constant: -20),
+            checkList.bottomAnchor.constraint(equalTo: cell.bottomAnchor, constant: -22)
+        ])
     }
 
     public func configureCellInformations(text: String, imageName: String) {

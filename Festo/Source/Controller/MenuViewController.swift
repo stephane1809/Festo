@@ -8,6 +8,7 @@
 import UIKit
 
 class MenuViewController: UIViewController {
+
     public var selectedFood: Set<FoodModel> = []
     public var selectedIndexPaths = Set<IndexPath>()
     private var sectionTitle = [String]()
@@ -18,7 +19,7 @@ class MenuViewController: UIViewController {
         view = menuView
         menuView.menuTableView.delegate = self
         menuView.menuTableView.dataSource = self
-        sectionTitle = ["Comidas", "Doces", "Bebidas", "Bebidas +18"]
+        sectionTitle = ["", "Convidados", "Comidas", "Doces", "Bebidas", "Bebidas +18"]
 
     }
 }
@@ -33,11 +34,18 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
 
         switch section {
         case 0:
-            return foods.count
+            return 1
         case 1:
-            return drinks.count
+            return 1
         case 2:
+            return foods.count
+        case 3:
+            return candies.count
+        case 4:
+            return drinks.count
+        case 5:
             return alcoholicDrinks.count
+            
         default:
             return 3
         }
@@ -52,37 +60,69 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 84
+        switch indexPath.section {
+        case 0:
+            return 200
+        default:
+            return 84
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: MenuTableViewCell.identifier, for: indexPath) as?
-                MenuTableViewCell else {
-            return UITableViewCell(style: .default, reuseIdentifier: MenuTableViewCell.identifier)
-        }
-
         switch indexPath.section {
         case 0:
+            guard let header = tableView.dequeueReusableCell(withIdentifier: MenuFolderCell.identifier, for: indexPath) as?
+                    MenuFolderCell else {
+                return UITableViewCell(style: .default, reuseIdentifier: MenuFolderCell.identifier)
+            }
+            return header
+        case 1:
+            guard let stepper = tableView.dequeueReusableCell(withIdentifier: StepperViewCell.identifier, for: indexPath) as?
+                    StepperViewCell else {
+                return UITableViewCell(style: .default, reuseIdentifier: StepperViewCell.identifier)
+            }
+            return stepper
+        case 2:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MenuTableViewCell.identifier, for: indexPath) as?
+                    MenuTableViewCell else {
+                return UITableViewCell(style: .default, reuseIdentifier: MenuTableViewCell.identifier)
+            }
             cell.configureCellInformations(text: foods[indexPath.row].name,
                                            imageName: foods[indexPath.row].imageFood ?? "")
-        case 1:
+            return cell
+        case 3:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MenuTableViewCell.identifier, for: indexPath) as?
+                    MenuTableViewCell else {
+                return UITableViewCell(style: .default, reuseIdentifier: MenuTableViewCell.identifier)
+            }
+            cell.configureCellInformations(text: candies[indexPath.row].name,
+                                           imageName: candies[indexPath.row].imageFood ?? "")
+            return cell
+        case 4:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MenuTableViewCell.identifier, for: indexPath) as?
+                    MenuTableViewCell else {
+                return UITableViewCell(style: .default, reuseIdentifier: MenuTableViewCell.identifier)
+            }
             cell.configureCellInformations(text: drinks[indexPath.row].name,
                                            imageName: drinks[indexPath.row].imageDrink ?? "")
-        case 2:
+            return cell
+        case 5:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MenuTableViewCell.identifier, for: indexPath) as?
+                    MenuTableViewCell else {
+                return UITableViewCell(style: .default, reuseIdentifier: MenuTableViewCell.identifier)
+            }
             cell.configureCellInformations(text: alcoholicDrinks[indexPath.row].name,
                                            imageName: alcoholicDrinks[indexPath.row].imageAlcoholic ?? "")
+            return cell
         default:
-            cell.configureCellInformations(text: "menu", imageName: "pizza")
+            return UITableViewCell()
         }
-
-        return cell
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let cell = cell as? MenuTableViewCell else { return }
         if selectedIndexPaths.contains(indexPath) {
-            cell.checkList.image = UIImage(systemName: "circle.fill")
+            cell.checkList.image = UIImage(systemName: "checkmark.circle.fill")
         }
     }
 
@@ -104,10 +144,10 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
             selectedIndexPaths.remove(indexPath)
             selectedFood.remove(food)
         } else {
-            cell.checkList.image = UIImage(systemName: "circle.fill")
+            cell.checkList.image = UIImage(systemName: "checkmark.circle.fill")
             selectedIndexPaths.insert(indexPath)
             selectedFood.insert(food)
-            print(selectedFood.count)
+            print(selectedFood)
         }
     }
 }
