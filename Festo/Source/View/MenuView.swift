@@ -8,7 +8,7 @@
 import UIKit
 
 class MenuView: UIView {
-    
+
     lazy var menuTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -16,9 +16,11 @@ class MenuView: UIView {
         tableView.separatorStyle = .none
         tableView.allowsMultipleSelection = true
         tableView.register(MenuTableViewCell.self, forCellReuseIdentifier: MenuTableViewCell.identifier)
+        tableView.register(MenuFolderCell.self, forCellReuseIdentifier: MenuFolderCell.identifier)
+        tableView.register(StepperViewCell.self, forCellReuseIdentifier: StepperViewCell.identifier)
         return tableView
     }()
-    
+
     lazy var tabBar: UIView = {
         let tabBar = UIView()
         tabBar.translatesAutoresizingMaskIntoConstraints = false
@@ -26,15 +28,15 @@ class MenuView: UIView {
         tabBar.layer.borderColor = CGColor(red: 0.69, green: 0.68, blue: 0.68, alpha: 0.88)
         return tabBar
     }()
-    
+
     lazy var nextButton: UIButton = {
         let nextButton = UIButton(type: .system)
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         nextButton.tintColor = .systemBackground
-        nextButton.backgroundColor = .systemGreen
+        nextButton.backgroundColor = UIColor(red: 0.58, green: 0.63, blue: 0.19, alpha: 1)
         nextButton.layer.cornerRadius = 22
         nextButton.setTitle("Pronto!", for: .normal)
-        
+
         let action = UIAction { _ in
 //            print(self.menuTableView.indexPathsForSelectedRows)
         }
@@ -62,14 +64,14 @@ private func configConstraints() {
         menuTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
         menuTableView.trailingAnchor.constraint(equalTo: trailingAnchor)
     ])
-    
+
     NSLayoutConstraint.activate([
         nextButton.topAnchor.constraint(equalTo: topAnchor, constant: 740),
         nextButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
         nextButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
         nextButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -22)
     ])
-    
+
     NSLayoutConstraint.activate([
         tabBar.topAnchor.constraint(equalTo: topAnchor, constant: 730),
         tabBar.leadingAnchor.constraint(equalTo: leadingAnchor),

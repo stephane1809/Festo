@@ -13,3 +13,7 @@ struct FoodModel {
     let foodCategory: String
     let imageFood: String?
 }
+
+extension FoodModel: Hashable {
+    
+}

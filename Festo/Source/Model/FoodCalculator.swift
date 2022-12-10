@@ -88,8 +88,6 @@ struct FoodCalculator {
                     foodGuests.append(foodGuest)
             }
         }
-
         return foodGuests
     }
-
 }
