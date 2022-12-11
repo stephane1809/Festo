@@ -14,9 +14,7 @@ var foods: [FoodModel] = [
     FoodModel(name: "Mini Hot-dog", unitWeight: 40, foodCategory: "salgado", imageFood: "hotdog"),
     FoodModel(name: "Mini Burger", unitWeight: 40, foodCategory: "salgado", imageFood: "hamburger"),
     FoodModel(name: "Esfirra", unitWeight: 75, foodCategory: "salgado", imageFood: "esfiha"),
-    FoodModel(name: "Bolo", unitWeight: 100, foodCategory: "doce", imageFood: "bolo"),
-    FoodModel(name: "Docinhos", unitWeight: 16, foodCategory: "doce", imageFood: "docinhos")
-                         ]
+]
 
 var drinks: [DrinkModel] = [DrinkModel(name: "Refri", percentForGuestWithOther: 0.73, imageDrink: "refrigerante"),
                             DrinkModel(name: "Suco", percentForGuestWithOther: 0.27, imageDrink: "suco"),
@@ -26,4 +24,10 @@ var alcoholicDrinks: [AlcoholicModel] = [AlcoholicModel(name: "Cervejinha", cate
                                         AlcoholicModel(name: "Vodka", category: "Destilado", imageAlcoholic: "vodka"),
                                         AlcoholicModel(name: "Cachaça", category: "Destilado", imageAlcoholic: "cachaca"),
                                         AlcoholicModel(name: "Gin", category: "Destilado", imageAlcoholic: "gin")]
+
+
+var candies: [FoodModel] = [
+    FoodModel(name: "Bolo", unitWeight: 100, foodCategory: "doce", imageFood: "bolo"),
+    FoodModel(name: "Docinhos", unitWeight: 16, foodCategory: "doce", imageFood: "docinhos")
+]
 
